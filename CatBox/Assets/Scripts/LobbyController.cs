@@ -40,7 +40,7 @@ public class LobbyController : GameManager<LobbyController>
     // Overrided Function
     void SendJoinedTeamData(int id, string teamType)
     {
-        StartCoroutine(GetRequestFromWeb(LobbyModel.FRONT_JOINREQUEST_URL + id.ToString() + "/" + teamType));
+        StartCoroutine(GetRequestFromWeb(LobbyModel.FRONT_REQUEST_URL +"joined/"+ id.ToString() + "/" + teamType));
     }
 
     protected override IEnumerator GetRequestFromWeb(string url)

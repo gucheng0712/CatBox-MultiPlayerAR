@@ -6,7 +6,7 @@ public class GamePlayController : GameManager<GamePlayController>
 {
     public void SendCapturedMarkerData(int id, string markerName)
     {
-        StartCoroutine(GetRequestFromWeb(LobbyModel.FRONT_JOINREQUEST_URL+""+ + id.ToString() + "/" + markerName));
+        StartCoroutine(GetRequestFromWeb(LobbyModel.FRONT_REQUEST_URL+ "captured/" + id.ToString() + "/" + markerName));
     }
 
 }
