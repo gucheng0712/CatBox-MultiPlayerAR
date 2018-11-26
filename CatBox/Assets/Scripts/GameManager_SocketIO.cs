@@ -3,7 +3,7 @@ using UnityEngine;
 using BestHTTP;
 using BestHTTP.SocketIO;
 
-public class MySocketManager : MonoBehaviour
+public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
 {
 
     // Create a variable to hold an instance of the SocketManager class
@@ -12,6 +12,12 @@ public class MySocketManager : MonoBehaviour
     // Public variables so you can change the address and port in the inspector
     public string socketServerAddress = "localhost";
     public int port = 3000;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {

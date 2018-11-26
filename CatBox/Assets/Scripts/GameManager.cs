@@ -30,7 +30,7 @@ public abstract class GameManager<T> : GameManager where T:GameManager<T>
         Instance = null;
     }
 
-    public virtual IEnumerator GetRequestFromWeb(string url)
+    protected virtual IEnumerator GetRequestFromWeb(string url)
     {
         // Create UnityWebRequest and give it the url 
         UnityWebRequest uwr = UnityWebRequest.Get(url);

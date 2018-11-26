@@ -5,25 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class LobbyView : MonoBehaviour
 {
-
     #region Btn Events
     // Choose Blue Team
     public void ChooseBlueTeamBtnPressed()
     {
-        LobbyController.Instance.SendJoinedTeamData(Model.s_id, LobbyModel.BLUE_TEAM_NAME);
-        LoadToMainGameScene();
+        LobbyController.Instance.teamType = TeamType.Blue;
     }
 
     // Choose Red Team
     public void ChooseRedTeamBtnPressed()
     {
-        LobbyController.Instance.SendJoinedTeamData(Model.s_id, LobbyModel.RED_TEAM_NAME);
-        LoadToMainGameScene();
+        LobbyController.Instance.teamType = TeamType.Red;
     }
 
-    public void LoadToMainGameScene()
+    // Team Pick Confirm and Load to next Scene
+    public void StartGameBtnPressed()
     {
-        SceneManager.LoadScene("MainGame");
+       LobbyController.Instance.SendJoinedTeamData(LobbyController.Instance.teamType);
     }
     #endregion
 }
