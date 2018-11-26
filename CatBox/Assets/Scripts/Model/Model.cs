@@ -7,11 +7,11 @@ public class Model
 {
     public static int s_id;
 
-    public LobbyModel lobbyModel;
+    public TeamSelectionModel lobbyModel;
 
     public Model()
     {
-        lobbyModel = new LobbyModel();
+        lobbyModel = new TeamSelectionModel();
     }
 
 

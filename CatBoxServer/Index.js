@@ -68,7 +68,7 @@ app.get('/joined/:id/:team', function(req, res) {
     }
 
     res.send(id + " joined " + team + "!");
-    console.log("PlayerThisRound Json Object: " + playersThisRound);
+    console.log(playersThisRound);
 });
 
 app.get('/captured/:id/:markerName', function(req, res) {
@@ -216,7 +216,7 @@ function sendGameStatus() {
         "highScorePlayerScore": highScore.score
     }
 
-    return gameStatusData;
+    //return gameStatusData;
     io.emit('gameStatusData', gameStatusData);
     ResetRound();
 }

@@ -4,17 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GamePlayView : MonoBehaviour {
+public class GamePlayView : MonoBehaviour
+{
 
-    public void OnScanBtnPressed()
-    {
-        SceneManager.LoadScene("ARTest");
-       // SceneManager.LoadScene("AR");
-    }
 
     public void OnBackMainSceneBtnPressed()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Lobby");
     }
 
 

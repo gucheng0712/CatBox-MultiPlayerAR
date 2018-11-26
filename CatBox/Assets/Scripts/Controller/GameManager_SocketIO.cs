@@ -36,6 +36,9 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         // set up listeners for socket.io by passing a name and the name of
         // a function (without parenthesis!) that you have defined below
         socketManager.Socket.On("mySocketEvent", ReceivedMySocketEvent);
+        socketManager.Socket.On("markerCaptured", MarkerCapturedSocketEvent);
+        socketManager.Socket.On("timeUpdate", TimeUpdateSocketEvent);
+        socketManager.Socket.On("gameStatusData", GameEndSocketEvent);
 
         // Same as above, except these are existing named events that socket.io can emit
         socketManager.Socket.On("error", SocketError);
@@ -46,24 +49,60 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
 
     void ReceivedMySocketEvent(Socket socket, Packet packet, params object[] args)
     {
-        string eventName = packet.DecodeEventName();
-        string eventPayload = packet.RemoveEventName(true);
-        Debug.Log(eventName);
-        Debug.Log(eventPayload);
-
         // eventName will be the name of the event that triggered this function (in this
         // case it will be 'mySocketEvent' because we defined this function to listen to
         // that event on line 38)
         //
         // eventPayload will be the 'msg' parameter that your node.js server sends. This will
-        // always be interpretted as a string. If you need to decode JSON, take a look at
-        // ClickToCommunicate.cs from Session 11 for an example.
+        // always be interpretted as a string sometimes need to decode to JSON.
+        string eventName = packet.DecodeEventName();
+        string eventPayload = packet.RemoveEventName(true);
+        Debug.Log("server emit event name: " + eventName);
+        Debug.Log(eventPayload);
     }
+
+
+    void MarkerCapturedSocketEvent(Socket socket, Packet packet, params object[] args)
+    {
+        string eventName = packet.DecodeEventName();
+        string eventPayload = packet.RemoveEventName(true);
+        Debug.Log("server emit event name: " + eventName);
+        // Debug.Log(eventPayload);
+
+        JsonFormatter.FromJson<MarkerCaptureDataResponse>(eventPayload, ref GameManager_APIResponses.Instance.markerCaptureDataResponse);
+        //GameManager_APIResponses.Instance.PrintMarkerCaptureData(GameManager_APIResponses.Instance.markerCaptureDataResponse);
+    }
+
+
+    void TimeUpdateSocketEvent(Socket socket, Packet packet, params object[] args)
+    {
+        string eventName = packet.DecodeEventName();
+        string eventPayload = packet.RemoveEventName(true);
+        //Debug.Log("server emit event name: " + eventName);
+        //        Debug.Log(eventPayload);
+
+        JsonFormatter.FromJson<TimeUpdatedResponse>(eventPayload, ref GameManager_APIResponses.Instance.timeUpdatedResponse);
+        //GameManager_APIResponses.Instance.PrintTimeUpdateData(GameManager_APIResponses.Instance.timeUpdatedResponse);
+    }
+
+    void GameEndSocketEvent(Socket socket, Packet packet, params object[] args)
+    {
+        string eventName = packet.DecodeEventName();
+        string eventPayload = packet.RemoveEventName(true);
+        Debug.Log("server emit event name: " + eventName);
+        //  Debug.Log(eventPayload);
+
+        JsonFormatter.FromJson<GameStatusResponse>(eventPayload, ref GameManager_APIResponses.Instance.gameStatusResponse);
+        //GameManager_APIResponses.Instance.PrintGameOverStatus(GameManager_APIResponses.Instance.gameStatusResponse);
+    }
+
+
 
     public void SendSomeData(string dataString)
     {
         socketManager.Socket.Emit("myOutgoingData", dataString);
     }
+
 
     // Very important! Make sure you close the socket connection when your program
     // closes or quits!
@@ -74,6 +113,7 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         Debug.Log("Closing Socket");
         socketManager.Close();
     }
+
 
     // The functions below simply print helpful debug stuff in the event of
     // errors and connections.
