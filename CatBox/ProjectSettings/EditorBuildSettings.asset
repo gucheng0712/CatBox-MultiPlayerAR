@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/StartMenu.unity
+    guid: 83a3c3d425ba143c4b4d709f28449de2
+  - enabled: 1
+    path: Assets/Scenes/TeamSelection.unity
     guid: 05108020ff0ea794692e0a3461498d10
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
+    path: Assets/Scenes/Lobby.unity
     guid: 57c47d30afc03d2449d6df32816c4578
   - enabled: 1
-    path: Assets/Scenes/ARTest.unity
+    path: Assets/Scenes/GamePlayTest.unity
     guid: 08bd5f8493157ad43a47bbac996c5d8e
   - enabled: 1
-    path: Assets/Scenes/AR.unity
+    path: Assets/Scenes/AR-GamePlay.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

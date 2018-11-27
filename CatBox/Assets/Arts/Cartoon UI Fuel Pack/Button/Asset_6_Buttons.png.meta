@@ -1,0 +1,484 @@
+fileFormatVersion: 2
+guid: d82b995049b0f5f4ea767a8c8627d5ef
+timeCreated: 1491461770
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Asset 41_0
+    21300002: Asset 41_1
+    21300004: Asset 41_2
+    21300006: Asset 41_3
+    21300008: Asset 41_4
+    21300010: Asset 41_5
+    21300012: Asset 41_6
+    21300014: Asset 41_7
+    21300016: Asset 41_8
+    21300018: Asset 41_9
+    21300020: Asset 41_10
+    21300022: Asset 41_11
+    21300024: Asset 41_12
+    21300026: Asset 41_13
+    21300028: Asset 41_14
+    21300030: Asset 41_15
+    21300032: Asset 41_16
+    21300034: Asset 41_17
+    21300036: Asset 41_18
+    21300038: Asset 41_19
+    21300040: Asset 41_20
+    21300042: Asset 41_21
+    21300044: Asset 41_22
+    21300046: Asset 41_23
+    21300048: Asset 41_24
+    21300050: Asset 41_25
+    21300052: Asset 41_26
+    21300054: Asset 41_27
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset 41_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3511
+        width: 529
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 3511
+        width: 529
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_2
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 3511
+        width: 531
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 3558
+        width: 735
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2928
+        width: 529
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2928
+        width: 529
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_6
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2928
+        width: 531
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_7
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2913
+        width: 531
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2338
+        width: 529
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_9
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2341
+        width: 529
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_10
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2338
+        width: 531
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_11
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2330
+        width: 530
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 528
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_13
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1755
+        width: 529
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_14
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1755
+        width: 531
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_15
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1747
+        width: 530
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 529
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_17
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1170
+        width: 529
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_18
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1170
+        width: 531
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_19
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1165
+        width: 531
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 529
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 582
+        width: 529
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_22
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 584
+        width: 531
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_23
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 582
+        width: 530
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 528
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 529
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_26
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 0
+        width: 531
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Asset 41_27
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 530
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
