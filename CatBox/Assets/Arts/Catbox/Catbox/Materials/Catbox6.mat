@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Catbox4
+  m_Name: Catbox6
   m_Shader: {fileID: 4800000, guid: b35a2abbdd5b15d4ca40103088758eac, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -43,7 +43,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 630e29a5389e13941a7b8e94f123b227, type: 3}
+        m_Texture: {fileID: 2800000, guid: ace034578efc66547a2efa1f843e6d1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -68,7 +68,7 @@ Material:
     - _DepthBias: 0.00012
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeThickness: 2
+    - _EdgeThickness: 0.13
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Mode: 0
