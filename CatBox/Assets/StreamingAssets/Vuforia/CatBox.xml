@@ -3,8 +3,8 @@
   <Tracking>
     <ImageTarget name="marker05" size="0.152400 0.209176" />
     <ImageTarget name="marker04" size="0.152400 0.209176" />
-    <ImageTarget name="marker02" size="0.152400 0.209018" />
-    <ImageTarget name="marker01" size="0.152400 0.208860" />
-    <ImageTarget name="marker03" size="0.152400 0.213543" />
+    <ImageTarget name="marker01" size="0.152400 0.209176" />
+    <ImageTarget name="marker03" size="0.152400 0.209176" />
+    <ImageTarget name="marker02" size="0.152400 0.209176" />
   </Tracking>
 </QCARConfig>

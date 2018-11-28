@@ -14,6 +14,13 @@ public class TeamSelectionController : GameManager<TeamSelectionController>
         LoadTeam();
     }
 
+
+    public void SendPlayerStatusData()
+    {
+        string url = GameManager_Data.Instance.model.frontRequestURL + "players/";
+        StartCoroutine(GetRequestFromWeb(url));
+    }
+
     // Send the picked Team data to the Server
     public void SendJoinedTeamData(TeamType _teamType)
     {
@@ -35,13 +42,13 @@ public class TeamSelectionController : GameManager<TeamSelectionController>
     // Overrided Function
     void SendJoinedTeamData(int id, string _teamType)
     {
-        string url = Model.FRONT_REQUEST_URL_LOCAL + "joined/" + id.ToString() + "/" + _teamType;
+        string url = GameManager_Data.Instance.model.frontRequestURL + "joined/" + id.ToString() + "/" + _teamType;
         StartCoroutine(GetRequestFromWeb(url));
-
     }
 
     protected override void EventAfterReceivedData(string s)
     {
+        GameManager_APIResponses.Instance.CheckPlayerStatus();// Check player status after join a game
         SceneManager.LoadScene("Lobby");
     }
 

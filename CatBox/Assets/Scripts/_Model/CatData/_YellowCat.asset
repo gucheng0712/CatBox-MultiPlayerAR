@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb4aafe115be8b84ba25f19b4760bd6f, type: 3}
-  m_Name: T1_BlueCat
+  m_Name: _YellowCat
   m_EditorClassIdentifier: 
-  ID: 0
-  imageTargetID: marker01
-  catName: Sora
-  scoreMultiplier: 10
+  ID: 4
+  imageTargetID: marker05
+  catName: Hana
+  scoreMultiplier: 2

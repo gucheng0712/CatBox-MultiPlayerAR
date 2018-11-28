@@ -29,6 +29,7 @@ public class TeamSelectionView : MonoBehaviour
     {
         GameManager_Data.Instance.model.teamSelectionModel.TeamType = TeamType.Blue;
         TeamSelectionController.Instance.SendJoinedTeamData(GameManager_Data.Instance.model.teamSelectionModel.TeamType);
+
     }
 
     // Choose Red Team

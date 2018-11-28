@@ -7,49 +7,50 @@ using UnityEngine.SceneManagement;
 public class GamePlayView : MonoBehaviour
 {
 
-
     public void OnBackMainSceneBtnPressed()
     {
         SceneManager.LoadScene("Lobby");
     }
 
-
     #region Btn Events For testing
-    public void OnBlueCapturedPressed(Button btn)
-    {
-        //todo check if this marker has already been captured by other team
-        string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
-        GamePlayController.Instance.SendCapturedMarkerData(GameManager_Data.Instance.model.ID, markerID);
-    }
-    public void OnPinkCapturedPressed(Button btn)
-    {
-        //todo check if this marker has already been captured by other team
-        string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
-        GamePlayController.Instance.SendCapturedMarkerData(GameManager_Data.Instance.model.ID, markerID);
 
-    }
-    public void OnBrownCapturedPressed(Button btn)
-    {
-        //todo check if this marker has already been captured by other team
-        string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
-        GamePlayController.Instance.SendCapturedMarkerData(GameManager_Data.Instance.model.ID, markerID);
-
-    }
-    public void OnYellowCapturedPressed(Button btn)
-    {
-        //todo check if this marker has already been captured by other team
-        string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
-        GamePlayController.Instance.SendCapturedMarkerData(GameManager_Data.Instance.model.ID, markerID);
-
-    }
     public void OnBlackCapturedPressed(Button btn)
     {
-        //todo check if this marker has already been captured by other team
-        string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
-        GamePlayController.Instance.SendCapturedMarkerData(GameManager_Data.Instance.model.ID, markerID);
-
+        CaptureMarker(btn, GameManager_APIResponses.Instance.timeUpdatedResponse.marker01Control);
     }
 
+    public void OnBlueCapturedPressed(Button btn)
+    {
+        CaptureMarker(btn, GameManager_APIResponses.Instance.timeUpdatedResponse.marker02Control);
+    }
+
+    public void OnBrownCapturedPressed(Button btn)
+    {
+        CaptureMarker(btn, GameManager_APIResponses.Instance.timeUpdatedResponse.marker03Control);
+    }
+
+    public void OnPinkCapturedPressed(Button btn)
+    {
+        CaptureMarker(btn, GameManager_APIResponses.Instance.timeUpdatedResponse.marker04Control);
+    }
+
+    public void OnYellowCapturedPressed(Button btn)
+    {
+        CaptureMarker(btn, GameManager_APIResponses.Instance.timeUpdatedResponse.marker05Control);
+    }
+
+    void CaptureMarker(Button btn, string markerControl)
+    {
+        GamePlayController.Instance.StartCountDown();
+        GamePlayController.Instance.ShowMarkControlStatus(markerControl);
+        if (GamePlayController.Instance.isCountingDown == false)
+        {
+            GamePlayController.Instance.CheckMarkerControlStatus(markerControl);
+
+            string markerID = btn.gameObject.GetComponentInChildren<Cat>().catModel.imageTargetID;
+            GameManager_Event.Instance.MarkerCaptured(markerID);
+        }
+    }
 
     #endregion
 }

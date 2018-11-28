@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4838760357583130}
-  - component: {fileID: 114525782577993476}
   - component: {fileID: 114823994281255574}
+  - component: {fileID: 114525782577993476}
   m_Layer: 0
   m_Name: GameManager_Data
   m_TagString: Untagged
@@ -59,6 +59,7 @@ MonoBehaviour:
     m_isGameOverFlag: 0
     teamSelectionModel:
       m_teamType: 0
+  hasJoinedTeam: 0
 --- !u!114 &114823994281255574
 MonoBehaviour:
   m_ObjectHideFlags: 1

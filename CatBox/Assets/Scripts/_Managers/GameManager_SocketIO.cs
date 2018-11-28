@@ -65,19 +65,17 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         // Debug.Log(eventPayload);
 
         JsonFormatter.FromJson<MarkerCaptureDataResponse>(eventPayload, ref GameManager_APIResponses.Instance.markerCaptureDataResponse);
-        //GameManager_APIResponses.Instance.PrintMarkerCaptureData(GameManager_APIResponses.Instance.markerCaptureDataResponse);
     }
 
 
     void TimeUpdateSocketEvent(Socket socket, Packet packet, params object[] args)
     {
-        string eventName = packet.DecodeEventName();
+        //        string eventName = packet.DecodeEventName();
         string eventPayload = packet.RemoveEventName(true);
         //        Debug.Log("server emit event name: " + eventName);
         //        Debug.Log(eventPayload);
 
         JsonFormatter.FromJson<TimeUpdatedResponse>(eventPayload, ref GameManager_APIResponses.Instance.timeUpdatedResponse);
-        //GameManager_APIResponses.Instance.PrintTimeUpdateData(GameManager_APIResponses.Instance.timeUpdatedResponse);
     }
 
     void GameEndSocketEvent(Socket socket, Packet packet, params object[] args)
@@ -88,7 +86,6 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         //  Debug.Log(eventPayload);
 
         JsonFormatter.FromJson<GameStatusResponse>(eventPayload, ref GameManager_APIResponses.Instance.gameStatusResponse);
-        //GameManager_APIResponses.Instance.PrintGameOverStatus(GameManager_APIResponses.Instance.gameStatusResponse);
     }
 
 

@@ -44,6 +44,7 @@ public abstract class GameManager<T> : GameManager where T : GameManager<T>
         else
         {
             Debug.Log("Received: " + uwr.downloadHandler.text);
+
             EventAfterReceivedData(uwr.downloadHandler.text);
         }
     }
