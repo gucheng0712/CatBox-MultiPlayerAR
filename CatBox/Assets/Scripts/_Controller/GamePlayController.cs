@@ -7,49 +7,20 @@ public class GamePlayController : GameManager<GamePlayController>
 
     public bool canScore;
 
-    public float currentTime;
-    public bool isCountingDown;
+    public bool isLookingAtMarker;
 
     void Start()
     {
         GameManager_Event.Instance.MarkerCapturedEvent += SendCapturedMarkerData;
     }
 
-    private void Update()
+
+    public void ShowMarkControlStatus(string markerControl)
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartCountDown();
-        }
-
-        if (isCountingDown == true)
-        {
-            CountDown(5);
-        }
-
+        print(markerControl);
     }
 
-    public void StartCountDown()
-    {
-        currentTime = Time.time;
-        isCountingDown = true;
-    }
 
-    void CountDown(float cd)
-    {
-        if ((Time.time - currentTime) > cd)
-        {
-            currentTime = Time.time;
-            isCountingDown = false;
-            print("finishCountdown");
-        }
-    }
-
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        GameManager_Event.Instance.MarkerCapturedEvent -= SendCapturedMarkerData;
-    }
 
     public void SendCapturedMarkerData(string markerName)
     {
@@ -65,54 +36,9 @@ public class GamePlayController : GameManager<GamePlayController>
 
     }
 
-    public void ShowMarkControlStatus(string markerControl)
+    protected override void OnDestroy()
     {
-        print(markerControl);
+        base.OnDestroy();
+        GameManager_Event.Instance.MarkerCapturedEvent -= SendCapturedMarkerData;
     }
-
-    public void CheckMarkerControlStatus(string markerControl)
-    {
-        string team = GameManager_APIResponses.Instance.playersThisRound[GameManager_Data.Instance.model.ID.ToString()].team;
-
-        switch (markerControl)
-        {
-            case "NEUTRAL":
-                // Scanned a neutral marker
-                print("Scanned a neutral marker");
-                canScore = true;
-                break;
-            case "BLUE":
-                if (team == "BLUE")
-                {
-                    // Scanned a marker that already belongs to this Team.
-                    print(" Scanned a marker that already belongs to this Team.");
-                    canScore = false;
-                }
-                else if (team == "RED")
-                {
-                    //Scanned a marker that belongs to opposing team.
-                    print(" Scanned a marker that belongs to opposing team.");
-                    canScore = true;
-                }
-                break;
-            case "RED":
-                if (team == "RED")
-                {
-                    canScore = false;
-                    // Scanned a marker that already belongs to this Team.
-                    print(" Scanned a marker that already belongs to this Team.");
-                }
-                else if (team == "BLUE")
-                {
-                    canScore = true;
-                    //Scanned a marker that belongs to opposing team.
-                    print(" Scanned a marker that belongs to opposing team.");
-                }
-                break;
-            default:
-                break;
-        }
-    }
-
-
 }
