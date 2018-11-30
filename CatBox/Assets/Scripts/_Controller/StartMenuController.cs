@@ -24,7 +24,6 @@ public class StartMenuController : GameManager<StartMenuController>
 
     protected override void EventAfterReceivedData(string s)
     {
-
         if (!finishCheckIfPlayerHasJoinedTeam)
         {
             GameManager_APIResponses.Instance.playersThisRound = JsonMapper.ToObject<SDictionaryOfStringAndPlayerStatus>(s);

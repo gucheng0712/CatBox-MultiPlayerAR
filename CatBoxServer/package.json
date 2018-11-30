@@ -18,6 +18,6 @@
     "homepage": "https://github.com/gucheng0712/CatBox-MultiPlayerAR#readme",
     "dependencies": {
         "express": "^4.16.4",
-        "socket.io": "^2.1.1"
+        "socket.io": "^2.2.0"
     }
 }

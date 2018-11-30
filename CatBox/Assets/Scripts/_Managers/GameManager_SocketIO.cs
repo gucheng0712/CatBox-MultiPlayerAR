@@ -50,10 +50,10 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         //
         // eventPayload will be the 'msg' parameter that your node.js server sends. This will
         // always be interpretted as a string sometimes need to decode to JSON.
-        string eventName = packet.DecodeEventName();
-        string eventPayload = packet.RemoveEventName(true);
-        Debug.Log("server emit event name: " + eventName);
-        Debug.Log(eventPayload);
+        //string eventName = packet.DecodeEventName();
+        //string eventPayload = packet.RemoveEventName(true);
+        //Debug.Log("server emit event name: " + eventName);
+        //Debug.Log(eventPayload);
     }
 
 
@@ -76,6 +76,7 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         //        Debug.Log(eventPayload);
 
         JsonFormatter.FromJson<TimeUpdatedResponse>(eventPayload, ref GameManager_APIResponses.Instance.timeUpdatedResponse);
+        GameManager_Event.Instance.TimeUpdatedEvents();
     }
 
     void GameEndSocketEvent(Socket socket, Packet packet, params object[] args)
@@ -86,6 +87,7 @@ public class GameManager_SocketIO : GameManager<GameManager_SocketIO>
         //  Debug.Log(eventPayload);
 
         JsonFormatter.FromJson<GameStatusResponse>(eventPayload, ref GameManager_APIResponses.Instance.gameStatusResponse);
+        GameManager_Event.Instance.GameOverEvents();
     }
 
 

@@ -5,26 +5,36 @@ using UnityEngine;
 public class GameManager_Event : GameManager<GameManager_Event>
 {
     public delegate void MarkerCapturedEventHandler(string marker);
-    public event MarkerCapturedEventHandler MarkerCapturedEvent;
+    public event MarkerCapturedEventHandler OnMarkerCaptured;
+
+    public delegate void TimeUpdatedEventHandler();
+    public event TimeUpdatedEventHandler OnTimeUpdated;
 
     public delegate void GameOverEventHandler();
-    public event GameOverEventHandler GameOverEvent;
+    public event GameOverEventHandler OnGameOver;
 
-    public void MarkerCaptured(string markerStatus)
+    public void MarkerCapturedEvents(string markerStatus)
     {
-        if (MarkerCapturedEvent != null)
+        if (OnMarkerCaptured != null)
         {
-            MarkerCapturedEvent(markerStatus);
+            OnMarkerCaptured(markerStatus);
         }
     }
 
-
-    public void GameOver()
+    public void TimeUpdatedEvents()
     {
-        if (GameOverEvent != null)
+        if (OnTimeUpdated != null)
+        {
+            OnTimeUpdated();
+        }
+    }
+
+    public void GameOverEvents()
+    {
+        if (OnGameOver != null)
         {
             GameManager_Data.Instance.model.IsGameOverFlag = true;
-            GameOverEvent();
+            OnGameOver();
         }
     }
 }

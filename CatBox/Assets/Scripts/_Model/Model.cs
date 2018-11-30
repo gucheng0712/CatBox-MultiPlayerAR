@@ -8,7 +8,7 @@ public class Model
 {
     public const string ID_KEY = "ID";
     //public const string FRONT_REQUEST_URL = "http://ar.pixels-pixels.com/";
-    public string frontRequestURL = "http://localhost:8000/";
+    public string frontRequestURL = "http://ar.pixels-pixels.com/";
 
     [SerializeField] int m_id;// User Id
     public int ID { get { return m_id; } set { m_id = value; } }
