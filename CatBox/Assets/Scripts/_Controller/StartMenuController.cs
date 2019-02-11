@@ -12,7 +12,7 @@ public class StartMenuController : GameManager<StartMenuController>
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine(GetRequestFromWeb("http://ar.pixels-pixels.com/players"));
+            StartCoroutine(GetRequestFromWeb("http://127.0.0.1:8000/players"));
         }
     }
 
@@ -27,10 +27,10 @@ public class StartMenuController : GameManager<StartMenuController>
         if (!finishCheckIfPlayerHasJoinedTeam)
         {
             GameManager_APIResponses.Instance.playersThisRound = JsonMapper.ToObject<SDictionaryOfStringAndPlayerStatus>(s);
-            //foreach (var item in playersThisRound)
-            //{
-            //    print(item.Key);
-            //}
+            foreach (var item in GameManager_APIResponses.Instance.playersThisRound)
+            {
+                print(item.Key);
+            }
             if (GameManager_APIResponses.Instance.playersThisRound.ContainsKey(GameManager_Data.Instance.model.ID.ToString()))
             {
                 Debug.Log("Player Has already joined the team");

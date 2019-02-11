@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -796,12 +796,12 @@ Prefab:
     - target: {fileID: 114885602260174114, guid: edca8da80e65257429fb332791033654,
         type: 2}
       propertyPath: socketServerAddress
-      value: ar.pixels-pixels.com
+      value: 127.0.0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114885602260174114, guid: edca8da80e65257429fb332791033654,
         type: 2}
       propertyPath: port
-      value: 80
+      value: 8000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edca8da80e65257429fb332791033654, type: 2}
@@ -910,6 +910,11 @@ Prefab:
     - target: {fileID: 4838760357583130, guid: ab291bf1297f944329ebc8d5c46c0b8f, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114525782577993476, guid: ab291bf1297f944329ebc8d5c46c0b8f,
+        type: 2}
+      propertyPath: model.frontRequestURL
+      value: http://127.0.0.1:8000/
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab291bf1297f944329ebc8d5c46c0b8f, type: 2}
